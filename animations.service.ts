@@ -116,7 +116,7 @@ const slideInRightAnimation = () => {
             // style({ transform: 'translate3d(75%, 0, 0)', opacity: 0.3 }),
             // style({ transform: 'translate3d(50%, 0, 0)', opacity: 0.6  }),
             // style({ transform: 'translate3d(25%, 0, 0)', opacity: 0.7  }),
-            style({ transform: 'translate3d(0, 0, 0)', opacity: 1  })
+            style({ transform: 'translate3d(0, 0, 0)', opacity: 1 })
           ]))
         ]), { optional: true })
       ])
@@ -139,28 +139,31 @@ const slideOutRightAnimation = () => {
   );
 };
 
-// const SlideOutRightAnimationParams = {
-//   options: {
-//     duration: 1000,
-//     stagger: 400
-//   },
-//   keyframes: [
-//     style({ opacity: 0 }),
-//     style({ transform: 'translate3d(0, 0, 0)' }),
-//     style({ visibility: 'hidden', transform: 'translate3d(0, -100%, 0)' })
-//   ],
-//   name: 'slideOutRightAnimation',
-//   selector: 'slideOutRight'
-// };
+const PulseAnimationParams = {
+  options: {
+    duration: 1000,
+    stagger: 400
+  },
+  keyframes: [
+    style({ transform: 'scale3d(1, 1, 1)' }),
+    style({ transform: 'scale3d(1.05, 1.05, 1.05)' }),
+    style({ transform: 'scale3d(1, 1, 1)' }),
+    style({ transform: 'scale3d(1.05, 1.05, 1.05)' }),
+    style({ transform: 'scale3d(1, 1, 1)' })
+  ],
+  name: 'pulseAnimation',
+  selector: 'pulse'
+};
 
-// const slideOutRightAnimation = (params) => {
-//   return stringify(animateGenerator(SlideOutRightAnimationParams as any));
-// };
+const pulseAnimation = (params) => {
+  return stringify(animateGenerator(PulseAnimationParams as any));
+};
 
 export const AnimationsService = {
   slideOutRight: slideOutRightAnimation,
   fadeIn: fadeInAnimation,
-  slideInRight: slideInRightAnimation
+  slideInRight: slideInRightAnimation,
+  pulse: pulseAnimation
 };
 
 
