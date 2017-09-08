@@ -9,4 +9,10 @@ providers: [...,AnimationsService]
 
 ##USAGE
 
-comming soon..
+import { AnimationsService } from 'angular-animation-lib';
+
+const fadeIn = JSON.parse(AnimationsService.fadeIn());
+
+ animations: [
+    fadeIn
+    ...
