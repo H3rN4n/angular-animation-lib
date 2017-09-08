@@ -1,6 +1,6 @@
 {
   "name": "angular-animation-lib",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular 4.2+ Animations Library",
   "main": "index.js",
   "scripts": {
