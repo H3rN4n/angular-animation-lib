@@ -1,7 +1,7 @@
 import { trigger, style, transition, animate, keyframes, query, stagger, AnimationTriggerMetadata, AnimationStyleMetadata } from '@angular/animations';
-import { params } from './models'
+import { Params } from './models'
 
-export const animateGenerator = (params: params): AnimationTriggerMetadata => {
+export const animateGenerator = (params: Params): AnimationTriggerMetadata => {
   const keyframes = params.keyframes as any;
   return trigger(params.name, [
     transition('* => *', [
